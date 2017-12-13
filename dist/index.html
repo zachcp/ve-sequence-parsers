@@ -1,0 +1,106 @@
+<html>
+<head>
+    <script src="bioparsers.min.js"></script>
+</head>
+    
+<body>
+<h2>Hello</h2>
+
+<script> 
+var gb = 'LOCUS       pBbE0c-RFP              2815 bp    DNA     circular\n' +
+'ACCESSION   pBbE0c-RFP\n' +
+'VERSION     pBbE0c-RFP.1\n' +
+'KEYWORDS    .\n' +
+'FEATURES             Location/Qualifiers\n' +
+'     gene            complement(2011..2670)\n' +
+'                     /label=CmR\n' +
+'                     /note=\"GENE [ZFP-GG destination LacUV5 p15A CmR]\"\n' +
+'                     /vntifkey=\"22\"\n' +
+'                     /gene=\"CmR\"\n' +
+'                     /note=\"[ZFP-GG destination LacUV5 p15A CmR]\"\n' +
+'     gene            2812..915\n' +
+'                     /label=RFP cassette\n' +
+'                     /note=\"GENE [pBbE0k-RFP]\"\n' +
+'                     /note=\"GENE GENE [pBbE0k-RFP]\"\n' +
+'                     /gene=\"RFP cassette\"\n' +
+'     rep_origin      complement(1202..1884)\n' +
+'                     /label=colE1 origin\n' +
+'                     /note=\"REP_ORIGIN REP_ORIGIN [ColE1]\"\n' +
+'                     /note=\"REP_ORIGIN [ColE1]\"\n' +
+'                     /gene=\"ColE1 Origin\"\n' +
+'                     /vntifkey=\"33\"\n' +
+'     terminator      1890..1995\n' +
+'                     /label=T0\n' +
+'                     /gene=\"Terminator\"\n' +
+'                     /note=\"TERMINATOR [p15A KanR]\"\n' +
+'                     /note=\"TERMINATOR TERMINATOR [p15A KanR]\"\n' +
+'                     /vntifkey=\"43\"\n' +
+'ORIGIN\n' +
+'        1 cagctagctc agtcctaggt actgtgctag ctactagtga aagaggagaa atactagatg\n' +
+'       61 gcttcctccg aagacgttat caaagagttc atgcgtttca aagttcgtat ggaaggttcc\n' +
+'      121 gttaacggtc acgagttcga aatcgaaggt gaaggtgaag gtcgtccgta cgaaggtacc\n' +
+'      181 cagaccgcta aactgaaagt taccaaaggt ggtccgctgc cgttcgcttg ggacatcctg\n' +
+'      241 tccccgcagt tccagtacgg ttccaaagct tacgttaaac acccggctga catcccggac\n' +
+'      301 tacctgaaac tgtccttccc ggaaggtttc aaatgggaac gtgttatgaa cttcgaagac\n' +
+'      361 ggtggtgttg ttaccgttac ccaggactcc tccctgcaag acggtgagtt catctacaaa\n' +
+'      421 gttaaactgc gtggtaccaa cttcccgtcc gacggtccgg ttatgcagaa aaaaaccatg\n' +
+'      481 ggttgggaag cttccaccga acgtatgtac ccggaagacg gtgctctgaa aggtgaaatc\n' +
+'      541 aaaatgcgtc tgaaactgaa agacggtggt cactacgacg ctgaagttaa aaccacctac\n' +
+'      601 atggctaaaa aaccggttca gctgccgggt gcttacaaaa ccgacatcaa actggacatc\n' +
+'      661 acctcccaca acgaagacta caccatcgtt gaacagtacg aacgtgctga aggtcgtcac\n' +
+'      721 tccaccggtg cttaataacg ctgatagtgc tagtgtagat cgctactaga gccaggcatc\n' +
+'      781 aaataaaacg aaaggctcag tcgaaagact gggcctttcg ttttatctgt tgtttgtcgg\n' +
+'      841 tgaacgctct ctactagagt cacactggct caccttcggg tgggcctttc tgcgtttata\n' +
+'      901 tactagaagc ggccgggatc ctaactcgag taaggatctc caggcatcaa ataaaacgaa\n' +
+'      961 aggctcagtc gaaagactgg gcctttcgtt ttatctgttg tttgtcggtg aacgctctct\n' +
+'     1021 actagagtca cactggctca ccttcgggtg ggcctttctg cgtttatacc tagggcgttc\n' +
+'     1081 ggctgcggcg agcggtatca gctcactcaa aggcggtaat acggttatcc acagaatcag\n' +
+'     1141 gggataacgc aggaaagaac atgtgagcaa aaggccagca aaaggccagg aaccgtaaaa\n' +
+'     1201 aggccgcgtt gctggcgttt ttccataggc tccgcccccc tgacgagcat cacaaaaatc\n' +
+'     1261 gacgctcaag tcagaggtgg cgaaacccga caggactata aagataccag gcgtttcccc\n' +
+'     1321 ctggaagctc cctcgtgcgc tctcctgttc cgaccctgcc gcttaccgga tacctgtccg\n' +
+'     1381 cctttctccc ttcgggaagc gtggcgcttt ctcatagctc acgctgtagg tatctcagtt\n' +
+'     1441 cggtgtaggt cgttcgctcc aagctgggct gtgtgcacga accccccgtt cagcccgacc\n' +
+'     1501 gctgcgcctt atccggtaac tatcgtcttg agtccaaccc ggtaagacac gacttatcgc\n' +
+'     1561 cactggcagc agccactggt aacaggatta gcagagcgag gtatgtaggc ggtgctacag\n' +
+'     1621 agttcttgaa gtggtggcct aactacggct acactagaag gacagtattt ggtatctgcg\n' +
+'     1681 ctctgctgaa gccagttacc ttcggaaaaa gagttggtag ctcttgatcc ggcaaacaaa\n' +
+'     1741 ccaccgctgg tagcggtggt ttttttgttt gcaagcagca gattacgcgc agaaaaaaag\n' +
+'     1801 gatctcaaga agatcctttg atcttttcta cggggtctga cgctcagtgg aacgaaaact\n' +
+'     1861 cacgttaagg gattttggtc atgactagtg cttggattct caccaataaa aaacgcccgg\n' +
+'     1921 cggcaaccga gcgttctgaa caaatccaga tggagttctg aggtcattac tggatctatc\n' +
+'     1981 aacaggagtc caagcgagct cgatatcaaa ttacgccccg ccctgccact catcgcagta\n' +
+'     2041 ctgttgtaat tcattaagca ttctgccgac atggaagcca tcacaaacgg catgatgaac\n' +
+'     2101 ctgaatcgcc agcggcatca gcaccttgtc gccttgcgta taatatttgc ccatggtgaa\n' +
+'     2161 aacgggggcg aagaagttgt ccatattggc cacgtttaaa tcaaaactgg tgaaactcac\n' +
+'     2221 ccagggattg gctgagacga aaaacatatt ctcaataaac cctttaggga aataggccag\n' +
+'     2281 gttttcaccg taacacgcca catcttgcga atatatgtgt agaaactgcc ggaaatcgtc\n' +
+'     2341 gtggtattca ctccagagcg atgaaaacgt ttcagtttgc tcatggaaaa cggtgtaaca\n' +
+'     2401 agggtgaaca ctatcccata tcaccagctc accgtctttc attgccatac gaaattccgg\n' +
+'     2461 atgagcattc atcaggcggg caagaatgtg aataaaggcc ggataaaact tgtgcttatt\n' +
+'     2521 tttctttacg gtctttaaaa aggccgtaat atccagctga acggtctggt tataggtaca\n' +
+'     2581 ttgagcaact gactgaaatg cctcaaaatg ttctttacga tgccattggg atatatcaac\n' +
+'     2641 ggtggtatat ccagtgattt ttttctccat tttagcttcc ttagctcctg aaaatctcga\n' +
+'     2701 taactcaaaa aatacgcccg gtagtgatct tatttcatta tggtgaaagt tggaacctct\n' +
+'     2761 tacgtgccga tcaacgtctc attttcgcca gatatcgaat tcatgagatc tttga\n' +
+'//'
+
+var options = {
+    inclusive1BasedStart: false
+};
+    
+console.log(gb);
+
+// var gb2 = bioparsers.genbankToJson(gb, function(result) {console.log(result)}, options);
+var sequences;
+var gb2 = bioparsers.genbankToJson(gb, function(result) {
+    console.log(result);
+    sequences = result[0].parsedSequence
+}, options);
+
+
+</script>
+</body>
+
+        
+</html>
